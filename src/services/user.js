@@ -93,4 +93,14 @@ export default {
       },
     );
   },
+  async getSearchUser(search) {
+    return await request.get(
+      `/user/search/${search}`,
+      {
+        headers: {
+          Authorization: sessionStorage.getItem('token'),
+        },
+      },
+    );
+  },
 };

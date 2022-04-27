@@ -70,4 +70,14 @@ export default {
       },
     );
   },
+  async getSearchCar(search) {
+    return await request.get(
+      `/car/search/${search}`,
+      {
+        headers: {
+          Authorization: sessionStorage.getItem('token'),
+        },
+      },
+    );
+  },
 };

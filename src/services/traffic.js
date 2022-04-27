@@ -48,4 +48,14 @@ export default {
       },
     );
   },
+  async getSearchTraffic(search) {
+    return await request.get(
+      `/traffic/search/${search}`,
+      {
+        headers: {
+          Authorization: sessionStorage.getItem('token'),
+        },
+      },
+    );
+  },
 };

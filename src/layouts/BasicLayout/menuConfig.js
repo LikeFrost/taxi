@@ -1,10 +1,10 @@
 const asideMenuConfig = [
-  // {
-  //   name: '公司管理',
-  //   path: '/company',
-  //   icon: 'chart-bar',
-  //   auth: ['super'],
-  // },
+  {
+    name: '公司管理',
+    path: '/company',
+    icon: 'chart-bar',
+    auth: ['super', 'admin'],
+  },
   {
     name: '人员管理',
     path: '/driver',
@@ -41,12 +41,12 @@ const asideMenuConfig = [
     icon: 'error',
     auth: ['super', 'admin', 'user'],
   },
-  // {
-  //   name: '信息查询',
-  //   path: '/search',
-  //   icon: 'search',
-  //   auth: ['super', 'admin'],
-  // },
+  {
+    name: '信息查询',
+    path: '/search',
+    icon: 'search',
+    auth: ['super', 'admin'],
+  },
 ];
 const headerMenuConfig = [];
 export { headerMenuConfig, asideMenuConfig };

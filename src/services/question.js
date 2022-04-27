@@ -46,4 +46,14 @@ export default {
       },
     );
   },
+  async getSearchQuestion(search) {
+    return await request.get(
+      `/question/search/${search}`,
+      {
+        headers: {
+          Authorization: sessionStorage.getItem('token'),
+        },
+      },
+    );
+  },
 };

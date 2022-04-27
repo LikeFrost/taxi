@@ -28,5 +28,10 @@ export default {
       const data = await TrafficService.deleteTraffic(id);
       return data;
     },
+    async getSearchTraffic(search) {
+      const data = await TrafficService.getSearchTraffic(search);
+      dispatch.traffic.update(data.traffics);
+      return data;
+    },
   }),
 };

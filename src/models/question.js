@@ -28,5 +28,10 @@ export default {
       const data = await QuestionService.deleteQuestion(id);
       return data;
     },
+    async getSearchQuestion(search) {
+      const data = await QuestionService.getSearchQuestion(search);
+      dispatch.question.update(data.questions);
+      return data;
+    },
   }),
 };

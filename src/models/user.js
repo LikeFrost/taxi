@@ -52,5 +52,10 @@ export default {
       const data = await UserService.deleteUser(name);
       return data;
     },
+    async getSearchUser(search) {
+      const data = await UserService.getSearchUser(search);
+      dispatch.user.updateUsers(data.users);
+      return data;
+    },
   }),
 };

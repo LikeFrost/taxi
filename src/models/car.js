@@ -36,5 +36,10 @@ export default {
       const data = await CarService.deleteCar(car);
       return data;
     },
+    async getSearchCar(search) {
+      const data = await CarService.getSearchCar(search);
+      dispatch.car.updateCars(data.cars);
+      return data;
+    },
   }),
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ConfigProvider } from '@alifd/next';
+import styles from './index.module.scss';
 
 (function () {
   const throttle = function (type, name, obj = window) {
@@ -49,7 +50,11 @@ export default function UserLayout({ children }) {
 
   return (
     <ConfigProvider device={device}>
-      {children}
+      <div className={styles.container}>
+        <div className={styles.mask}>
+          {children}
+        </div>
+      </div>
     </ConfigProvider>
   );
 }
